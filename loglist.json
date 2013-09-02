@@ -1,93 +1,23 @@
 [
 	{
-		"Title": "小伙伴们的舟山行",
-		"Date": 1376928000,
-		"Tags": [
-			{
-				"Name": "js",
-				"Alias": "js",
-				"Count": 0
-			},
-			{
-				"Name": "arduino",
-				"Alias": "arduino",
-				"Count": 0
-			},
-			{
-				"Name": "php",
-				"Alias": "php",
-				"Count": 0
-			}
-		],
+		"Title": "红梅采风",
+		"Date": 1378051200,
+		"Tags": null,
 		"Categorys": [
 			{
 				"Name": "album",
 				"Href": "",
 				"Alias": "album",
 				"Count": 0
-			},
-			{
-				"Name": "随记",
-				"Href": "",
-				"Alias": "other",
-				"Count": 0
-			},
-			{
-				"Name": "WEB",
-				"Href": "",
-				"Alias": "web",
-				"Count": 0
-			},
-			{
-				"Name": "嵌入式",
-				"Href": "",
-				"Alias": "embed",
-				"Count": 0
-			},
-			{
-				"Name": "about",
-				"Href": "http://www.baidu.com",
-				"Alias": "about",
-				"Count": -1
 			}
 		],
-		"Permalink": "xiao-huo-ban-men-de-zhou-shan-xing",
+		"Permalink": "hong-mei-cai-feng",
 		"MetaData": {
-			"category": "album,随记,WEB,嵌入式,about",
-			"tag": "js,arduino,php"
+			"category": "album"
 		},
-		"Src": "F:\\kuaipan\\Projects\\liqun.me\\小伙伴们的舟山行@2013-8-20",
+		"Src": "F:\\kuaipan\\Projects\\liqun.me\\红梅采风@2013-9-2",
 		"Type": "album",
-		"LastModTime": 1376931725,
-		"Summary": null,
-		"Log": null
-	},
-	{
-		"Title": "我的第一篇文章",
-		"Date": 1375286400,
-		"Tags": [
-			{
-				"Name": "js",
-				"Alias": "js",
-				"Count": 0
-			}
-		],
-		"Categorys": [
-			{
-				"Name": "随记",
-				"Href": "",
-				"Alias": "other",
-				"Count": 0
-			}
-		],
-		"Permalink": "wo-de-di-yi-pian-wen-zhang",
-		"MetaData": {
-			"category": "随记",
-			"tag": "js"
-		},
-		"Src": "F:\\kuaipan\\Projects\\liqun.me\\我的第一篇文章@2013-8-1\\article.md",
-		"Type": "article",
-		"LastModTime": 1375614815,
+		"LastModTime": 1378142316,
 		"Summary": null,
 		"Log": null
 	}

@@ -24,13 +24,15 @@
 			<div class="article_meta">
 				<span>by</span>
 				{{$.SiteInfo.Author}}
-				<span>on</span>{{.LogInfo.Date.Format " Jan 2 2006"}}
+				<span>on</span>
+				{{.LogInfo.Date.Format " Jan 2 2006"}}
 				<span>with</span>
 				<a href="././posts/{{.LogInfo.Permalink}}/index.html#comments">Comments</a>
 			</div>
 			<div class="text">
 				{{range .LogInfo.Log}}
 				<p><img src="{{.PhotoFileName}}" /></p>
+				{{if .HasComment}}<p style="text-align:center;margin-top:-15px">[{{.Comment}}]</p>{{end}}
 				{{end}}
 			</div>
 			<div class="big_sep"></div>
