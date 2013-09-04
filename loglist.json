@@ -1,5 +1,27 @@
 [
 	{
+		"Title": "关于Just的故事及使用指南",
+		"Date": 1378224000,
+		"Tags": null,
+		"Categorys": [
+			{
+				"Name": "随记",
+				"Href": "",
+				"Alias": "other",
+				"Count": 0
+			}
+		],
+		"Permalink": "guan-yu-just-de-gu-shi-ji-shi-yong-zhi-nan",
+		"MetaData": {
+			"category": "随记"
+		},
+		"Src": "F:\\kuaipan\\Projects\\liqun.me\\关于Just的故事及使用指南@2013-9-4\\article.md",
+		"Type": "article",
+		"LastModTime": 1378259086,
+		"Summary": null,
+		"Log": null
+	},
+	{
 		"Title": "红梅采风",
 		"Date": 1378051200,
 		"Tags": null,
