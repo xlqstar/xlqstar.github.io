@@ -22,6 +22,28 @@
 		"Log": null
 	},
 	{
+		"Title": "关于我，关于肖立群",
+		"Date": 1378224000,
+		"Tags": null,
+		"Categorys": [
+			{
+				"Name": "随记",
+				"Href": "",
+				"Alias": "other",
+				"Count": 0
+			}
+		],
+		"Permalink": "guan-yu-wo-guan-yu-xiao-li-qun",
+		"MetaData": {
+			"category": "随记"
+		},
+		"Src": "F:\\kuaipan\\Projects\\liqun.me\\关于我，关于肖立群@2013-9-4\\article.md",
+		"Type": "article",
+		"LastModTime": 1378367846,
+		"Summary": null,
+		"Log": null
+	},
+	{
 		"Title": "红梅采风",
 		"Date": 1378051200,
 		"Tags": null,
