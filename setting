@@ -2,13 +2,13 @@
 pageSize:		10
 
 #开放式分类(特殊分类：article、album)
-categorys:		album|随记(other)|WEB(web)|嵌入式(embed)|about@http://www.baidu.com
+categorys:		album|随记(other)|WEB(web)|嵌入式(embed)|about@http://liqun.me/posts/guan-yu-wo-guan-yu-xiao-li-qun/index.html
 
 #标签集
 tags:			js|arduino|php
 
 #友情链接
-links:			你的眼我的心 @ http://www.baidu.com	| 哇哈哈的博客 @ http://log.sdf.com
+links:			CSK.BLOG @ http://www.csksoft.net/blog/	| 韩寒的博客 @ http://blog.sina.com.cn/u/1191258123
 
 #站点名称(例如：liqun.me)
 site:			liqun.me

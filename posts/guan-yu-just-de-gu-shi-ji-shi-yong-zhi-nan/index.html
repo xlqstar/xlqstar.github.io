@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xml:lang="en-US" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>关于Just的故事及使用指南 | liqun.me</title>
+	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	<meta name="author" content="xlqstar">  
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="alternate" href="/atom.xml" title="liqun.me" type="application/atom+xml">
+	<!--[if lt IE 9]><script src="../../style/js/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="../../style/css/style.css" type="text/css" media="screen" /> 
+	<link rel="icon" type="image/png" href="../../style/images/favico.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/png" href="../../style/images/favico.ico" type="image/x-icon" />
+	<script type="text/javascript" src="../../style/js/jquery.js"></script>
+	<script type="text/javascript" src="../../style/js/main.js"></script>
+</head>
+
+<body>
+
+	<!--header--><div id="header">
+	<div id="nav_wrapper">
+		<div id="nav">
+			<div class="inner">
+				<h1 id="title"><a href="../../index.html">liqun.me</a></h1>
+				<div id="description" class="seal"></div>
+				<ul class="right">
+					<li><a href="../../index.html">首页</a></li>
+					
+					
+					<li><a href="../../album/index.html">album</a></li>
+					
+					<li class="dot">&bull;</li>
+					
+					
+					<li><a href="../../other/index.html">随记</a></li>
+					
+					<li class="dot">&bull;</li>
+					
+					
+					<li><a href="../../web/index.html">WEB</a></li>
+					
+					<li class="dot">&bull;</li>
+					
+					
+					<li><a href="../../embed/index.html">嵌入式</a></li>
+					
+					<li class="dot">&bull;</li>
+					
+					
+					<li><a href="http://liqun.me/posts/guan-yu-wo-guan-yu-xiao-li-qun/index.html">about</a></li>
+					
+					<li class="dot">&bull;</li>
+					
+					<li><a href="../../archives/index.html">归档</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="header_inner">
+		<div id="social">
+			<a href="http://weibo.com/u/2867098822" target="_blank" title="Follow Me @ Weibo"><img src="../../style/images/ic16_weibo.png"></a>
+			<a href="https://github.com/xlqstar" target="_blank" title="Fork Me @ Github"><img src="../../style/images/ic16_github.png"></a>
+			<!-- <a href="http://lyric.im/feed" target="_blank" title="Subscribe My Blog"><img src="../../style/images/ic16_rss.png"></a> -->
+		</div>
+		<div id="search">
+			<form action="http://www.google.com.hk/search" method="get" accept-charset="utf-8">
+				<input type="text" name="q" results="0" class="search_box" placeholder="Search">
+				<input type="hidden" name="q" value="site:liqun.me">
+			</form>
+		</div>
+		<div class="sep"></div>
+	</div>
+</div><!--//header-->
+
+	<div class="article">
+		<div class="inner">
+			<h2 class="article_title title">关于Just的故事及使用指南</h2>
+			<div class="article_meta">
+				<span>by</span>
+				xlqstar
+				<span>on</span>
+				 Sep 4 2013
+				<span>with</span>
+				<a href="../../posts/guan-yu-just-de-gu-shi-ji-shi-yong-zhi-nan/index.html#comments">Comments</a>
+			</div>
+			<div class="text"><h1>一、前言</h1>
+
+<p>Just静态blog编译引擎是我好几年前就一直在构思的作品，因为一直觉得我尼玛就为了写写文字，放放图就要学mysql、apache、nginx、linux、php、java、python、html、js、css，各种部署，各种架构，各种虚拟主机、VPS，尼玛就不觉得烦吗？！好不容易整好了还一会这出bug，那改bug的，不是个专业工程师还真做不了个独立博客。就算是使用网易、新浪的博客也一堆一堆的问题：</p>
+
+<ol>
+<li>没网的情况下没法写作</li>
+<li>在线编辑器繁琐不称心</li>
+<li>传张图片等老慢了</li>
+<li>想换个服务商，没法倒数据</li>
+<li>各不相同、让人迷惑、操作繁复的后台操作体验</li>
+<li>……</li>
+</ol>
+
+<p>于是我便一直有一个“我要写一个超简约博客”的种子埋在了心里。这时候初步有了静态blog静态引擎的构思，因为我觉得，什么样的操作对于用户来说最直观、最熟悉，毫无疑问就是文件系统的操作。“创建文件夹”“新建文件”“复制”“粘贴”……这些操作是用户最最熟悉，最最直观的方式，基于文件系统的blog还有个先天优势，那就是数据就保存在本地，就在你的硬盘里，你一眼就能看到他，你可以随意复制粘贴，再也没有无法倒数据的烦恼，没有龟速上传图片的烦恼，没有不能离线操作的烦恼。从这个角度上讲，Just颇有些Git哲学的意味在里面（分布式、离线操作）。(<em>^__^</em>)
+&lt;!&ndash;more&ndash;&gt;
+之前也有动手写过，最初使用php编写，记得写了两周甚至更长时间，代码思路改了好多稿，最后还是被好几个问题折腾疲乏了，影响了写下去的信心。其中之一便是php必须依赖php解释器，而<strong>无依赖</strong>一直以来就是我最看重的一个特性，可是当时我最熟悉的php给不了我这项特性。其次便是Just的构建思路不明确，写了两稿仍发现我的思路太过复杂，难以控制，写法难以理解，最后是一大堆Just尚未明确的各种特性的定型。也伤透了脑筋，因为我希望它足够简单，足够直观！</p>
+
+<p>在这次放弃的几个月后，无意发现了一个应用，叫<a href="http://farbox.com/">farBox</a>，看到作者利用金山快盘一类的网盘产品的API，自动生成静态日志的神奇创意。一方面坚定了我把just写下去的信心，另一方面也我借鉴到了很多不错的特性、跟思路，之后还了解到了github的jekyll，于是乎我再次燃起了小宇宙。</p>
+
+<p>为了满足：</p>
+
+<ol>
+<li>无依赖</li>
+<li>跨平台</li>
+<li>性能强悍</li>
+</ol>
+
+<p>这些条件，我决定学习一门新语言，那就是golang，目前为止，golang一直没有让我失望，绝对gelivable。这里要先感谢下《Go Web编程 交流群》里的各位高手大侠们的不吝赐教，尤其是<strong>@谢大，@无闻、@小伟、@喻恒春、@膘叔、@slene、@lunny、@paul young</strong>这些帮助过我的人，还有google-nuts里的好多位热心帮助我的国际友人<strong>Kyle Lemons</strong>。对了，其中还参考wendal大神的gor项目源码，在一周的熟悉后便开始了新的Just攻坚战。</p>
+
+<p>接下来就是苦逼兮兮的两个月，还没夏天开始写，一直写到夏天快过去，中间出去嵊泗岛旅了个游，本想放松一把结果还急性肠胃炎了一回，发烧、关节痛、咳嗽至今，还有老婆老在我旁边看无聊综艺各种骚扰，还有谢大的鼓励催促作为支撑，此处省略10万字……</p>
+
+<p>不管怎么说今天终于写完了，屁话讲了一大堆，目的有二，一方面是给大家讲述Just诞生的背景，可以加深大家对Just应用场景的理解，从而做出你更为理性的选择，另一方面是为了感谢下为我提供过帮助的人，祝你们一生幸福，再一方面是得瑟一下我有多么不容易o(∩_∩)o，装一下逼，还请见谅……</p>
+
+<h1>二、特性</h1>
+
+<ol>
+<li>绿色免安装，无依赖，跨平台（暂时只在windows上先行测试发布，不久会发布linux/macOs版本）。</li>
+<li>同时支持文章型日志，跟相册型日志。</li>
+<li>文章型日志：支持单个md文件形式，附件支持方式灵活。</li>
+<li>相册型日志：自动调节图片大小，支持自动读取相片备注信息。</li>
+<li>灵活、便捷的主题帖包机制，主题制作、切换很随意。</li>
+<li>命令具有向导式操作体验，几乎不用强行记住各个命令。</li>
+<li>超方便的创建日志体验，预定位功能再次大大简化您的操作。</li>
+<li>一键生成，并且只生成或改变有变动的部分，效率高。</li>
+<li>以“规约”代“配置”，使得配置简洁、易上手。（Just整体构建思想都建立在此之上）</li>
+<li>多站点支持</li>
+</ol>
+
+<h1>三、安装使用</h1>
+
+<h2>下载安装</h2>
+
+<p>下载：<a href="./just.zip">just.zip</a>，解压至你熟悉、或者习惯的目录</p>
+
+<h2>配置</h2>
+
+<p>首次使用最好确认下您的站点根目录，因为以后你创建站点都会在这边，并且Just各项操作都是只针对这个路径之下的站点的。所以这个配置项很重要，并且是不得不配置的。默认的路径就是just所在的当前目录，您也可以不做修改采用默认值。下面是命令修改根目录的演示、及解释：（除了可以通过下面的方式修改之外也可以直接用任意文本编辑器打开just同目录下的data文件，修改sitesroot值即可）</p>
+
+<ul>
+<li><strong>查看当前的sitesroot</strong>:</li>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] sitesroot</code></li>
+<li><strong>PS</strong>：命令中，[]包括的项是选填，若不填写，并且sitesroot路径下有多个站点，Just会采用向导模式引导你选择要操作的站点。首次调用该命令值应该为“.”，表示当前路径。</li>
+<li><strong>修改sitesroot</strong>：</li>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] sitesroot &lt;sites_root_path&gt;</code></li>
+<li><strong>PS</strong>：跟上一条命令相比，多了一个<sites_root_path>项，把这个替换为你想要重新设置的路径即可，记得若改路径中有空格的话一定要把整个路径裹上双引号。</li>
+</ul>
+
+<h2>创建站点：</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just newsite &lt;site_name&gt;</code></li>
+<li><strong>PS</strong>：<site_name>即为你欲创建站点的名字（比如我的个人blog就 just newsite liqun.me）；创建一个站点，这个命令要要输入使用两次，第一次执行这个命令，会提示您已经生成了一个配置样例文件，这时候你需要用任意编辑器打开这个配置文件进一步确认或调整。配置并不复杂，内容不多，而且都有样例，千万耐心。因为我思来想去这也是一个没法省略的步骤……</li>
+</ul>
+
+<p>上面就是这份配置的样例文件，其中都有详尽的注释，大部分配置的含义大家应该一眼就能看明白。</p>
+
+<pre><code>#索引页每页的条目数
+pageSize:       10
+
+#Just采用开放式分类，即一篇日志可以同时隶属多个分类
+#Just中有两个特殊分类：article、album，这两个分类名是内置的魔术分类名，他们是日志类型名，在Just中存在两种日志类型，即文章型(article)，相册型(album)
+#若填写album作为一个分类的话，所有相册型日志都将自动归为其中，即使MetaData中未填写
+#Just中分类名还有一种特殊形式即about@http://www.baidu.com，这种分类名为一种外链分类，@之前是站内/导航中显示的分类名，后面是他的外链链接地址。
+categorys:      album|随记(other)|WEB(web)|嵌入式(embed)|about@http://www.baidu.com
+
+#标签集
+tags:           js|arduino|php
+
+#友情链接
+links:          你的眼我的心 @ http://www.baidu.com   | 哇哈哈的博客 @ http://log.sdf.com
+
+#站点名称(例如：liqun.me)
+site:           liqun.me
+
+#站点域名(例如：liqun.me)
+domain:         liqun.me
+
+#作者
+author:         xlqstar
+
+#Email
+Email:          xlqstar@gmail.com
+
+#社交账号
+#@之前是社交账号类型识别，目前约定有weibo、github、facebook、twitter
+#这个标识用于某些模版中可以自动调用显示相应的社交账号链接
+socials:        weibo @ http://weibo.com/u/2867098822 | github @ https://github.com/xlqstar 
+</code></pre>
+
+<p>当您配置完毕后，即可再次执行<code>just newsite &lt;site_name&gt;</code>，操作无误的话，这回将在sitesroot下生成您的第一个站点啦！使用了Just的默认主题包，暂时还只有这一个主题包，不久我一定会加把劲，多制作些主题包。若您等不及的话您也可以加入进来一起制作主题包哦~</p>
+
+<h2>创建日志</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] post [&lt;log_type&gt;] &lt;title&gt;</code></li>
+<li><strong>PS</strong>：创建一篇文章型日志：<code>just post article &quot;hello world&quot;</code>或者<code>just post &quot;hello world&quot;</code>，即省略日志类型（log_type）这个参数的话默认为article型。创建一片相册型日志的话：<code>just post  album &quot;hello world&quot;</code>。</li>
+</ul>
+
+<h2>删除日志</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] delete [&lt;title&gt;]</code></li>
+<li><strong>PS</strong>：注意这个命令最后一个参数title也是一个可选参数，意味着你可以不填这个参数，如果不填写的话，会进入向导模式，罗列出目前的日志清单，供您选择，当然也可以直接填写title删除相应的日志。</li>
+</ul>
+
+<h2>构建</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] build</code></li>
+<li><strong>PS</strong>：这是编译构建日志的命令，是使用最频繁的命令之一，通常在删除日志、更新日志、新建日志的之后都要使用。</li>
+</ul>
+
+<h2>重新构建</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] rebuild</code></li>
+<li><strong>PS</strong>：这个命令通常是在调整完模版、或者更换主题包之后自动调用，仅仅重新构建所有的HTML部分。</li>
+</ul>
+
+<h2>重新构建全部</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] rebuildall</code></li>
+<li><strong>PS</strong>：这个命令使用比较少，只有极个别的情况下，为了保持整个站点的清爽，避免冗余垃圾文件，彻底重新生成。</li>
+</ul>
+
+<h2>更换主题包</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] switchtheme [&lt;theme_name&gt;]</code></li>
+<li><strong>PS</strong>：这个命令用于更换主题，最后的参数theme_name是指您想要更换成的主题名称，前提是当前just所在目录下的themes目录中存在该主题包。若不清楚有些什么主题包或者怕麻烦可以直接输入<code>just switchtheme</code>，剩下的由向导模式帮助您进行下一步操作。</li>
+</ul>
+
+<h2>调整图片大小</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] resize</code></li>
+<li><strong>PS</strong>：这个命令通常在更换主题后，原图片大小跟新主题不符合，风格脱离严重，则进行resize，实际上是删除所有相册型日志，重新生成。图多，或这图大，会导致resize进程缓慢，千万耐心等待一小会儿。</li>
+</ul>
+
+<h2>预览</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just [-site &lt;site_name&gt;] preview</code></li>
+<li><strong>PS</strong>：这需要我解释什么吗？</li>
+</ul>
+
+<h2>帮助</h2>
+
+<ul>
+<li><strong>命令</strong>：<code>just -h</code></li>
+</ul>
+
+<h1>二、源码下载安装</h1>
+
+<p>未完待续……</p>
+</div>
+			<div class="big_sep"></div>
+			
+			<div id="comments" class="comments">
+			<!-- UY BEGIN -->
+			<div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1818114"></script>
+			<!-- UY END -->
+			</div>
+		</div> <!-- .inner -->
+	</div>  <!-- .article -->
+
+	<!--footer--><div id="footer_wrapper">
+	<div id="footer">
+	<div id="footer_inner">
+		<div class="archives col">
+			<h2>Archives</h2>
+			<ul>
+				
+				<li><a href="../../archives/index.html#2013-9">2013-9</a></li>
+				
+			</ul>
+		</div>
+		<div class="tag_cloud col">
+			<h2>Tag Cloud</h2>
+			
+			<a class="tag" href="../../tags/js.html">js(0)</a>
+			
+			<a class="tag" href="../../tags/arduino.html">arduino(0)</a>
+			
+			<a class="tag" href="../../tags/php.html">php(0)</a>
+			
+		</div>
+		<div class="links col">
+			<h2>Links</h2>
+			<ul>
+				
+				<li><a href="http://www.csksoft.net/blog/">CSK.BLOG</a></li>
+				
+				<li><a href="http://blog.sina.com.cn/u/1191258123">韩寒的博客</a></li>
+				
+			</ul>
+		</div>
+		<div class="copyright">
+			2005 - 2013 © Liqun, All rights reserved. 
+			<span>&bull;</span> Powered by <a href="https://github.com/xlqstar/Just" target="_blank">Just</a>
+			<span>&bull;</span>	SealScript Theme by <a href="http://lyric.im" target="_blank">Lyric Wai</a>
+		</div>
+	</div>
+	</div>
+</div><!--//footer-->
+
+	<nav id="pagination">
+		
+		<a id="prev" href="../../posts/hong-mei-cai-feng/index.html" class="v_nav">
+			<span class="icon">Prev</span>
+		</a>
+		
+		
+		<a id="next" href="../../posts/guan-yu-wo-guan-yu-xiao-li-qun/index.html" class="v_nav">
+			<span class="icon">Next</span>
+		</a>
+		
+	</nav>
+	
+</body>
+</html>
