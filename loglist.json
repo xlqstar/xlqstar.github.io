@@ -17,7 +17,11 @@
 		},
 		"Src": "F:\\kuaipan\\Projects\\liqun.me\\关于Just的故事及使用指南@2013-9-4\\article.md",
 		"Type": "article",
+<<<<<<< HEAD
 		"LastModTime": 1378376922,
+=======
+		"LastModTime": 1378279033,
+>>>>>>> 29fcf2ecef8f733efa18f2ac308fd88056e78114
 		"Summary": "\n\n一、前言\n=============\nJust静态blog编译引擎是我好几年前就一直在构思的作品，因为一直觉得我尼玛就为了写写文字，放放图就要学mysql、apache、nginx、linux、php、java、python、html、js、css，各种部署，各种架构，各种虚拟主机、VPS，尼玛就不觉得烦吗？！好不容易整好了还一会这出bug，那改bug的，不是个专业工程师还真做不了个独立博客。就算是使用网易、新浪的博客也一堆一堆的问题：\n\n 1. 没网的情况下没法写作\n 2. 在线编辑器繁琐不称心\n 3. 传张图片等老慢了\n 4. 想换个服务商，没法倒数据\n 5. 各不相同、让人迷惑、操作繁复的后台操作体验\n 6. ……\n\n于是我便一直有一个“我要写一个超简约博客”的种子埋在了心里。这时候初步有了静态blog静态引擎的构思，因为我觉得，什么样的操作对于用户来说最直观、最熟悉，毫无疑问就是文件系统的操作。“创建文件夹”“新建文件”“复制”“粘贴”……这些操作是用户最最熟悉，最最直观的方式，基于文件系统的blog还有个先天优势，那就是数据就保存在本地，就在你的硬盘里，你一眼就能看到他，你可以随意复制粘贴，再也没有无法倒数据的烦恼，没有龟速上传图片的烦恼，没有不能离线操作的烦恼。从这个角度上讲，Just颇有些Git哲学的意味在里面（分布式、离线操作）。(*^__^*)",
 		"Log": null
 	},
@@ -39,7 +43,11 @@
 		},
 		"Src": "F:\\kuaipan\\Projects\\liqun.me\\关于我，关于肖立群@2013-9-4\\article.md",
 		"Type": "article",
+<<<<<<< HEAD
 		"LastModTime": 1378290146,
+=======
+		"LastModTime": 1378367846,
+>>>>>>> 29fcf2ecef8f733efa18f2ac308fd88056e78114
 		"Summary": null,
 		"Log": null
 	},
@@ -61,7 +69,11 @@
 		},
 		"Src": "F:\\kuaipan\\Projects\\liqun.me\\红梅采风@2013-9-2",
 		"Type": "album",
+<<<<<<< HEAD
 		"LastModTime": 1378203475,
+=======
+		"LastModTime": 1378176157,
+>>>>>>> 29fcf2ecef8f733efa18f2ac308fd88056e78114
 		"Summary": [
 			{
 				"Src": "F:\\kuaipan\\Projects\\liqun.me\\红梅采风@2013-9-2\\~_DSC0070.JPG",
